@@ -2,7 +2,6 @@ package test.command
 
 import com.virtualdogbert.ast.ErrorsHandler
 import com.virtualdogbert.ast.SkipErrorsHandler
-import grails.converters.JSON
 
 @ErrorsHandler
 class TestController {
@@ -35,7 +34,7 @@ class TestController {
         List errors = commandObjects.inject([]) { result, commandObject ->
 
             if (commandObject.hasErrors()) {
-                result + (commandObject.errors as JSON)
+                result + (commandObject.errors)
             } else {
                 result
             }
@@ -45,7 +44,7 @@ class TestController {
         if (errors) {
             //Do something
             println "error in custom error handler"
-            render errors
+            respond errors , [formats:['json', 'xml']]
             return true
         }
         //possibly do something else
