@@ -12,7 +12,10 @@ spring:
     groovy:
         template:
             check-template-location: false
-
+---
+command:
+    response:
+        code: 405
 ---
 grails:
     mime:
@@ -66,6 +69,7 @@ grails:
                 taglib: none
                 staticparts: none
 ---
+
 hibernate:
     cache:
         queries: false

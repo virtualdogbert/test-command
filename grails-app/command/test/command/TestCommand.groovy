@@ -1,9 +1,6 @@
 package test.command
 
-import grails.validation.Validateable
-
-
-class TestCommand  implements Validateable {
+class TestCommand {
     String name
     int number
 

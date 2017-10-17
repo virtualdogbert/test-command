@@ -15,6 +15,7 @@ class TestController {
     //over rides the default.
     def list(TestCommand test, int i) {
         //some controller code
+
         render "It works"
     }
 
@@ -22,6 +23,7 @@ class TestController {
     //over rides the default.
     def delete(TestCommand test, int i) {
         //some controller code
+        test
         println errors
         println hasErrors()
         println i
