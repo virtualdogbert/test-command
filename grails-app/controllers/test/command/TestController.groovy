@@ -26,7 +26,6 @@ class TestController {
         test
         println errors
         println hasErrors()
-        println i
         println test
         render "It works"
     }
