@@ -2,7 +2,7 @@ package test.command
 
 import grails.validation.Validateable
 
-class TestCommand2 implements  Validateable{
+class Test2Command implements  Validateable{
     int n
 
     static constraints = {

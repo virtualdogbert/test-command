@@ -30,6 +30,10 @@ class TestController {
         render "It works"
     }
 
+    def constraints(Test3Command test){
+        render "validated"
+    }
+
     //Your error handler
     private boolean someOtherErrorHandler(List commandObjects) {
         List errors = commandObjects.inject([]) { result, commandObject ->
