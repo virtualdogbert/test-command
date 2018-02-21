@@ -11,9 +11,9 @@ class TestController {
         render "It works"
     }
 
-    @ErrorsHandler(handler = 'someOtherErrorHandler')
+    //@ErrorsHandler(handler = 'someOtherErrorHandler')
     //over rides the default.
-    def list(TestCommand test, int i) {
+    def list(TestCommand test, Integer id) {
         //some controller code
 
         render "It works"
@@ -28,6 +28,11 @@ class TestController {
         println hasErrors()
         println test
         render "It works"
+    }
+
+    def map(Test4Command t4){
+        println t4.t2
+
     }
 
     def constraints(Test3Command test){

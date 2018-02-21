@@ -62,7 +62,7 @@ dependencies {
     compile "org.grails.plugins:cache"
     compile "org.hibernate:hibernate-ehcache"
     compile "org.grails.plugins:scaffolding"
-    compile "org.grails.plugins:command:2.0.0"
+    compile "org.grails.plugins:command:2.0.1"
 
     //compile 'com.virtualdogbert:GroovyConfigWriter:0.1'
     //compile 'org.grails.plugins:external-config:1.1.1-BUILD-SNAPSHOT'
@@ -81,8 +81,8 @@ dependencies {
 }
 
 //comment in to do remote debugging for AST transforms:
-//compileGroovy.groovyOptions.forkOptions.jvmArgs  = ['-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005']
-//compileTestGroovy.groovyOptions.forkOptions.jvmArgs = ['-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005']
+compileGroovy.groovyOptions.forkOptions.jvmArgs  = ['-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005']
+compileTestGroovy.groovyOptions.forkOptions.jvmArgs = ['-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005']
 
 task wrapper(type: Wrapper) {
     gradleVersion = gradleWrapperVersion
